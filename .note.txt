@@ -1,0 +1,41 @@
+```
+# Run npm init in the server folder
+cd server
+npm init
+
+# Install Nodemon (development dependency)
+npm install nodemon --save-dev
+
+# Add start script to package.json (server)
+# "scripts": {
+#   "start": "nodemon your-server-file.js"
+# }
+
+# Install concurrently (root folder)
+npm install concurrently --save-dev
+
+# Add start script to package.json (root)
+# "scripts": {
+#   "start": "concurrently \"npm run start --prefix server\" \"npm run start --prefix client\""
+# }
+
+# .gitignore (root)
+# server/node_modules
+# server/.env
+# client/node_modules
+# client/build
+# .DS_Store
+
+# Start server (development)
+npm run dev # (in server folder, if you added the 'dev' script)
+
+# Start server (production)
+npm start # (in server folder)
+
+# Start React app (development)
+cd client
+npm start
+
+# Start both server and React (root)
+npm start # (using concurrently)
+```
