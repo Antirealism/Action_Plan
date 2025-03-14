@@ -16,14 +16,10 @@ const userSchema = new mongoose.Schema(
 			required: true,
 			minlength: 6,
 		},
-		gender: {
+		permission: {
 			type: String,
 			required: true,
-			enum: ["male", "female"],
-		},
-		profilePic: {
-			type: String,
-			default: "",
+			enum: ["user", "manager", "superadmin"], /* permission= "user","manager","admin"; */
 		},
 		// createdAt, updatedAt => Member since <createdAt>
 	},

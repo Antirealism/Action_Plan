@@ -39,3 +39,15 @@ npm start
 # Start both server and React (root)
 npm start # (using concurrently)
 ```
+
+
+
+#Server dir list
+
+Server
+├───controllers
+├───database
+├───middleware
+├───models
+├───routes
+└───utils
